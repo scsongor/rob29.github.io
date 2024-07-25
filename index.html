@@ -1,1 +1,74 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rob's Birthday Escape Room</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="text-center py-4">
+        <h1>Happy Birthday, Rob!</h1>
+        <button onclick="mp3.play();return false;">Let's get started</button>
+        <p>
+          Welcome to your birthday escape room. Solve the puzzles to unlock your
+          gift!
+        </p>
+      </header>
+
+      <div class="progress mb-4">
+        <div
+          id="progressBar"
+          class="progress-bar"
+          role="progressbar"
+          style="width: 0%"
+          aria-valuenow="0"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+
+      <main>
+        <section id="challenge1" class="challenge-section my-4">
+          <h2>Challenge 1</h2>
+          <p>What's the name of your first pet?</p>
+          <input
+            type="text"
+            id="answer1"
+            class="form-control"
+            placeholder="Your answer"
+          />
+          <button class="btn btn-primary mt-2" onclick="checkAnswer(1)">
+            Submit
+          </button>
+        </section>
+        <section id="challenge2" class="challenge-section my-4 d-none">
+          <h2>Challenge 2</h2>
+          <p>Solve this riddle: What has keys but can't open locks?</p>
+          <input
+            type="text"
+            id="answer2"
+            class="form-control"
+            placeholder="Your answer"
+          />
+          <button class="btn btn-primary mt-2" onclick="checkAnswer(2)">
+            Submit
+          </button>
+        </section>
+        <section id="finalMessage" class="challenge-section my-4 d-none">
+          <h2>Congratulations!</h2>
+          <p>
+            You've completed the challenges. Your birthday gift is waiting for
+            you!
+          </p>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+body {
+  background-color: #ffffff;
+  color: #2b2b2b;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ffdac6;
+  color: #7c6a0a;
+  padding: 20px;
+  border-bottom: 2px solid #fa9500;
+}
+
+h1,
+h2 {
+  color: #fa9500;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+}
+
+.challenge-section {
+  background-color: #babd8d;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+input.form-control {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #eb6424;
+  border: none;
+  color: white;
+  width: 100%;
+}
+
+.progress {
+  height: 20px;
+}
+
+.progress-bar {
+  background-color: #7c6a0a;
+}
