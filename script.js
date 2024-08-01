@@ -5,22 +5,25 @@ document.addEventListener("DOMContentLoaded", () => {
 function checkAnswer(challengeNumber) {
   let answerInput = document.getElementById(`answer${challengeNumber}`);
   let answer = answerInput.value.trim().toLowerCase();
-  let correctAnswers = ["fluffy", "piano"]; // Example answers
+  let correctAnswers = ["ok", "55566688833", "piano"];
 
-  if (answer === correctAnswers[challengeNumber - 1]) {
-    alert("Correct!");
+  if (answer === correctAnswers[challengeNumber]) {
     localStorage.setItem(`challenge${challengeNumber}Completed`, true);
+    yay.play();
     checkProgress();
   } else {
-    alert("Try again!");
+    cow.play();
+    setTimeout(function () {
+      alert("Try again!");
+    }, 1000);
   }
 }
 
 function checkProgress() {
-  let totalChallenges = 2; // Update as more challenges are added
+  let totalChallenges = 10; // Update as more challenges are added
   let completedChallenges = 0;
 
-  for (let i = 1; i <= totalChallenges; i++) {
+  for (let i = 0; i <= totalChallenges; i++) {
     if (localStorage.getItem(`challenge${i}Completed`)) {
       document.getElementById(`challenge${i}`).classList.add("d-none");
       completedChallenges++;
@@ -54,3 +57,13 @@ var balloonpop = document.createElement("audio");
 balloonpop.setAttribute("src", "assets/pop.mp3");
 balloonpop.load();
 document.documentElement.appendChild(balloonpop);
+
+var yay = document.createElement("audio");
+yay.setAttribute("src", "assets/yay.mp3");
+yay.load();
+document.documentElement.appendChild(yay);
+
+var cow = document.createElement("audio");
+cow.setAttribute("src", "assets/cow.mp3");
+cow.load();
+document.documentElement.appendChild(cow);

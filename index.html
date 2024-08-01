@@ -13,20 +13,30 @@
   <body>
     <div
       class="balloon"
-      onclick="balloonpop.play();this.style.display = 'none';document.getElementById('escaperoom').style.display='block'; return false;"
+      onclick="balloonpop.play();this.style.display = 'none';document.getElementById('escaperoom').style.display='block'; this.parentNode.style.background='url(assets/bg.png)';return false;"
     ></div>
 
     <div class="container" id="escaperoom" style="display: none">
-      <header class="text-center py-4">
+      <!--<header class="text-center py-4">
         <h1>Happy Birthday, Rob!</h1>
         <button onclick="mp3.play();return false;">Let's get started</button>
         <p>
           Welcome to your birthday escape room. Solve the puzzles to unlock your
           gift!
         </p>
-      </header>
+      </header>-->
 
-      <div class="progress mb-4">
+      <section id="welcome" class="challenge-section my-4">
+        <h1>Happy Birthday, Rob!</h1>
+        <p>
+          Welcome to your birthday escape room. 🥳<br />
+          Well done for getting this far.<br />Solve the puzzles to unlock your
+          gift 🎁<br />
+          You're stuck and need a hint? Ask the best boyfriend in the world 💡😏
+        </p>
+      </section>
+
+      <!--<div class="progress mb-4">
         <div
           id="progressBar"
           class="progress-bar"
@@ -36,30 +46,84 @@
           aria-valuemin="0"
           aria-valuemax="100"
         ></div>
-      </div>
+      </div>-->
 
       <main>
-        <section id="challenge1" class="challenge-section my-4">
+        <section id="challenge0" class="challenge-section my-4 d-none">
+          <h2>Ready to get started?</h2>
+          <input type="hidden" id="answer0" class="form-control" value="ok" />
+          <button onclick="mp3.play();checkAnswer(0);return false;">
+            Let's goooooo!
+          </button>
+        </section>
+        <section id="challenge1" class="challenge-section my-4 d-none">
           <h2>Challenge 1</h2>
-          <p>What's the name of your first pet?</p>
+          <p>
+            In a secret garden, love first bloomed, <br />
+
+            Three words were spoken, our hearts attuned. <br />
+
+            To find the next clue, think of old phones, <br />
+
+            Where simple taps could say so much alone.<br /><br />
+
+            Seek a code hidden in the past, <br />
+
+            Just four letters, spelled out fast. <br />
+
+            Use the numbers to spell a verb, <br />
+
+            What is the code for the word?
+          </p>
           <input
             type="text"
             id="answer1"
             class="form-control"
-            placeholder="Your answer"
+            placeholder="Enter your code"
           />
           <button class="btn btn-primary mt-2" onclick="checkAnswer(1)">
             Submit
           </button>
         </section>
+
         <section id="challenge2" class="challenge-section my-4 d-none">
+          <h2>Challenge 2</h2>
+          <p>
+            In the fields, I graze all day,<br />
+
+            Munching on grass, my favorite buffet.<br />
+
+            I give you milk, I’m gentle and kind,<br />
+
+            With spots on my hide, a friendly find.<br />
+
+            MOOO is the sound I make, it’s true,<br />
+
+            Now guess my name, then email the clue.<br /><br />
+
+            Once you have the answer to this part of the riddle, email it to
+            <i>answer</i>@rob29.today to receive the full riddle that leads to
+            the next challenge.
+          </p>
+          <input
+            type="text"
+            id="answer2"
+            class="form-control"
+            placeholder="Enter your code"
+          />
+          <button class="btn btn-primary mt-2" onclick="checkAnswer(2)">
+            Submit
+          </button>
+        </section>
+
+        <!--<section id="challenge2" class="challenge-section my-4 d-none">
           <h2>Challenge 2</h2>
           <p>Solve this riddle: What has keys but can't open locks?</p>
           <input
             type="text"
             id="answer2"
             class="form-control"
-            placeholder="Your answer"
+            placeholder="Enter your code"
           />
           <button class="btn btn-primary mt-2" onclick="checkAnswer(2)">
             Submit
@@ -71,7 +135,7 @@
             You've completed the challenges. Your birthday gift is waiting for
             you!
           </p>
-        </section>
+        </section>-->
       </main>
     </div>
     <script src="script.js"></script>
