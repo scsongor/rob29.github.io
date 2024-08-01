@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rob's Birthday Escape Room</title>
+    <title>Rob - Happy Birthday! 🥳</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -11,7 +11,12 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
+    <div
+      class="balloon"
+      onclick="balloonpop.play();this.style.display = 'none';document.getElementById('escaperoom').style.display='block'; return false;"
+    ></div>
+
+    <div class="container" id="escaperoom" style="display: none">
       <header class="text-center py-4">
         <h1>Happy Birthday, Rob!</h1>
         <button onclick="mp3.play();return false;">Let's get started</button>

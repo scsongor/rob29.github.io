@@ -49,3 +49,8 @@ mp3.setAttribute("src", "happybday.mp3");
 mp3.load();
 document.documentElement.appendChild(mp3);
 //mp3.play();
+
+var balloonpop = document.createElement("audio");
+balloonpop.setAttribute("src", "assets/pop.mp3");
+balloonpop.load();
+document.documentElement.appendChild(balloonpop);
