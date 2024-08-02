@@ -13,7 +13,7 @@
   <body>
     <div
       class="balloon"
-      onclick="balloonpop.play();this.style.display = 'none';document.getElementById('escaperoom').style.display='block'; this.parentNode.style.background='url(assets/bg.png)';setTimeout(function(){mp3.play();},1000);return false;"
+      onclick="balloonpop.play();this.style.display = 'none';document.getElementById('escaperoom').style.display='block'; this.parentNode.style.background='url(assets/bg.png)';document.getElementById('fixedbtns').style.display='flex';setTimeout(function(){mp3.play();},1000);return false;"
     ></div>
 
     <div class="container" id="escaperoom" style="display: none">
@@ -250,7 +250,7 @@ public class SimpleHashMapExample {
         int shift = 3;
         int result = num >> shift;
 
-        return result;
+        return animalMap.get(result);
     }
 
     // Print code...
@@ -346,6 +346,10 @@ public class SimpleHashMapExample {
         </section>
       </main>
     </div>
+    <div class="fixed-buttons" id="fixedbtns" style="display:none">
+      <button id="playButton" onclick="mp3.paused ? mp3.play() : mp3.pause()">♫</button>
+      <!--<button id="restartButton" onclick="localStorage.clear();checkProgress();">↻</button>-->
+  </div>
     <script src="script.js"></script>
   </body>
 </html>
