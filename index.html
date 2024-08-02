@@ -13,7 +13,7 @@
   <body>
     <div
       class="balloon"
-      onclick="balloonpop.play();this.style.display = 'none';document.getElementById('escaperoom').style.display='block'; this.parentNode.style.background='url(assets/bg.png)';return false;"
+      onclick="balloonpop.play();this.style.display = 'none';document.getElementById('escaperoom').style.display='block'; this.parentNode.style.background='url(assets/bg.png)';setTimeout(function(){mp3.play();},1000);return false;"
     ></div>
 
     <div class="container" id="escaperoom" style="display: none">
@@ -28,12 +28,6 @@
 
       <section id="welcome" class="challenge-section my-4">
         <h1>Happy Birthday, Rob!</h1>
-        <p>
-          Welcome to your birthday escape room. 🥳<br />
-          Well done for getting this far.<br />Solve the puzzles to unlock your
-          gift 🎁<br />
-          You're stuck and need a hint? Ask the best boyfriend in the world 💡😏
-        </p>
       </section>
 
       <!--<div class="progress mb-4">
@@ -50,11 +44,16 @@
 
       <main>
         <section id="challenge0" class="challenge-section my-4 d-none">
+          <p>
+            Welcome to your birthday escape room. 🥳<br />
+            Well done for getting this far.<br />Solve the puzzles to unlock
+            your gift 🎁<br />
+            You're stuck and need a hint? Ask the best boyfriend in the world
+            💡😏
+          </p>
           <h2>Ready to get started?</h2>
           <input type="hidden" id="answer0" class="form-control" value="ok" />
-          <button onclick="mp3.play();checkAnswer(0);return false;">
-            Let's goooooo!
-          </button>
+          <button onclick="checkAnswer(0);return false;">Let's goooooo!</button>
         </section>
         <section id="challenge1" class="challenge-section my-4 d-none">
           <h2>Challenge 1</h2>
@@ -102,8 +101,8 @@
             Now guess my name, then email the clue.<br /><br />
 
             Once you have the answer to this part of the riddle, email it to
-            <i>answer</i>@rob29.today to receive the full riddle that leads to
-            the next challenge.
+            <i>csongorsovany{at}gmail.com</i> to receive the full riddle that
+            leads to the next challenge.
           </p>
           <input
             type="text"
@@ -115,6 +114,215 @@
             Submit
           </button>
         </section>
+
+        <section id="challenge3" class="challenge-section my-4 d-none">
+          <h2>Challenge 3</h2>
+          <p>
+            Let’s try something different. The below illustration has the
+            question and a hint for you to unlock the code.
+            <img src="assets/guinness.jpeg" style="width: 100%" />
+          </p>
+          <input
+            type="text"
+            id="answer3"
+            class="form-control"
+            placeholder="Enter your code"
+          />
+          <button class="btn btn-primary mt-2" onclick="checkAnswer(3)">
+            Submit
+          </button>
+        </section>
+
+        <section id="challenge4" class="challenge-section my-4 d-none">
+          <h2>Challenge 4</h2>
+          <p>
+            In a realm where treasures are stored,<br />
+
+            A mystical guide holds secrets, adored.<br />
+
+            With each unique key, a chest you unlock,<br />
+
+            Yet no path is drawn, nor does it walk.<br /><br />
+
+            It leads to riches, hidden from sight,<br />
+
+            Pairing each key with a treasure, just right.<br />
+
+            Not a land to explore, nor a road to tread,<br />
+
+            But it organises wealth in its stead.<br /><br />
+
+            A keeper of pairs, in order so neat,<br />
+
+            What is this guide, where the treasures meet?
+          </p>
+          <input
+            type="text"
+            id="answer4"
+            class="form-control"
+            placeholder="Enter your code"
+          />
+          <button class="btn btn-primary mt-2" onclick="checkAnswer(4)">
+            Submit
+          </button>
+        </section>
+
+        <section id="challenge5" class="challenge-section my-4 d-none">
+          <h2>Challenge 5</h2>
+          <p>
+            You've reached a critical point in your journey. The next step
+            requires you to contact someone who holds a crucial piece of
+            information. To ensure the message is secure, you need to send it in
+            a secret code. The secret code is hidden in this clue: "The city
+            known for the Black Church in the land often associated with
+            vampires." 🧛<br /><br />
+            Message a friend who has a special connection to this secret code.
+            Do not say anything else to them, just the secret code. If you are
+            right, their response will help you unlock the next challenge.
+          </p>
+          <input
+            type="text"
+            id="answer5"
+            class="form-control"
+            placeholder="Enter your code"
+          />
+          <button class="btn btn-primary mt-2" onclick="checkAnswer(5)">
+            Submit
+          </button>
+        </section>
+
+        <section id="challenge6" class="challenge-section my-4 d-none">
+          <h2>Challenge 6</h2>
+          <p>
+            In the night of glitter and shine, <br />
+
+            Where hearts did sway and intertwine, <br />
+
+            A queen of glamour took the stage, <br />
+
+            With lips so fierce and moves so sage.<br /><br />
+
+            Recall the night we first did meet, <br />
+
+            A kiss sealed fate, it was so sweet. <br />
+
+            To find the key to your next quest, <br />
+
+            Seek the handle of the best-dressed.<br /><br />
+
+            Look back at the queen's grand show, <br />
+
+            Her Instagram will help you go.
+          </p>
+          <input
+            type="text"
+            id="answer6"
+            class="form-control"
+            placeholder="Enter your code"
+          />
+          <button class="btn btn-primary mt-2" onclick="checkAnswer(6)">
+            Submit
+          </button>
+        </section>
+
+        <section id="challenge7" class="challenge-section my-4 d-none">
+          <h2>Challenge 7</h2>
+          <div style="text-align: left;">
+<pre>
+import java.util.HashMap;
+
+public class SimpleHashMapExample {
+
+    public static int getShiftAnswer() {
+        HashMap<Integer, String> animalMap = new HashMap<>();
+        animalMap.put(1, "DOG");
+        animalMap.put(2, "CAT");
+        animalMap.put(3, "OTTER");
+        animalMap.put(4, "BIRD");
+        animalMap.put(5, "FISH");
+        animalMap.put(6, "LION");
+        animalMap.put(7, "TIGER");
+        animalMap.put(8, "ELEPHANT");
+        animalMap.put(9, "GIRAFFE");
+        animalMap.put(10, "ZEBRA");
+
+        int num = 24;
+        int shift = 3;
+        int result = num >> shift;
+
+        return result;
+    }
+
+    // Print code...
+    public static void main(String[] args) {
+        System.out.println(getShiftAnswer());
+    }
+}
+    </pre>
+            </div>
+          <input
+            type="text"
+            id="answer7"
+            class="form-control"
+            placeholder="Enter your code"
+          />
+          <button class="btn btn-primary mt-2" onclick="checkAnswer(7)">
+            Submit
+          </button>
+        </section>
+
+        <section id="challenge8" class="challenge-section my-4 d-none">
+            <h2>Challenge 8</h2>
+            <p>
+                I am with you day and night,<br />
+                A companion through wrong and right.<br />
+                I hold secrets, both old and new,<br />
+                Look within, and you'll find a clue.<br /><br />
+
+                Though I help you see the world wide,<br />
+                It's in my skin that secrets hide.<br />
+                Peel back my layers, search within,<br />
+                The answer's found beneath my skin.
+            </p>
+            <input
+              type="text"
+              id="answer8"
+              class="form-control"
+              placeholder="Enter your code"
+            />
+            <button class="btn btn-primary mt-2" onclick="checkAnswer(8)">
+              Submit
+            </button>
+          </section>
+        
+          <section id="challenge9" class="challenge-section my-4 d-none">
+            <h2>Challenge 9</h2>
+            <p>
+                In stories of magic and battles fought,<br />
+                A clever witch's Patronus sought.<br />
+                A creature that swims, so sleek and free,<br />
+                In waters deep, where it loves to be.<br /><br />
+
+                A boy with a scar, known far and wide,<br />
+                His name a secret he cannot hide.<br />
+                Combine these clues, as you can see,<br />
+                To find the art formed from earth and tree.<br /><br />
+
+                With clay and wheel, an ancient craft,<br />
+                A word that's spun and shaped at last.<br />
+                From the witch's patronus and wizard's name,<br />
+                Unveil the art that's earned its fame.<br /><br />
+            </p>
+            <input
+              type="text"
+              id="answer9"
+              class="form-control"
+              placeholder="Enter your code"
+            />
+            <button class="btn btn-primary mt-2" onclick="checkAnswer(9)">
+              Submit
+            </button>
+          </section>
 
         <!--<section id="challenge2" class="challenge-section my-4 d-none">
           <h2>Challenge 2</h2>
@@ -128,14 +336,14 @@
           <button class="btn btn-primary mt-2" onclick="checkAnswer(2)">
             Submit
           </button>
-        </section>
-        <section id="finalMessage" class="challenge-section my-4 d-none">
-          <h2>Congratulations!</h2>
-          <p>
-            You've completed the challenges. Your birthday gift is waiting for
-            you!
-          </p>
         </section>-->
+        <section id="finalMessage" class="challenge-section my-4 d-none">
+          <h2>Congratulations!🥳</h2>
+          <p>
+            You've completed all pieces to the puzzle. Your birthday gift is the last code.<br /><br />
+            See you on Tuesday! 😉🏺
+          </p>
+        </section>
       </main>
     </div>
     <script src="script.js"></script>
